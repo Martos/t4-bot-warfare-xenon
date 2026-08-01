@@ -636,8 +636,19 @@ added()
 */
 add_bot()
 {
-	bot = addtestclient();
-	
+	name = getABotName();
+
+	bot = undefined;
+
+	if ( isdefined( name ) && name.size >= 3 )
+	{
+		bot = addtestclient( name );
+	}
+	else
+	{
+		bot = addtestclient();
+	}
+
 	if ( isdefined( bot ) )
 	{
 		bot.pers[ "isBot" ] = true;
