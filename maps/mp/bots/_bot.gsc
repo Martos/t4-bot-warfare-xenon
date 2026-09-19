@@ -9,7 +9,15 @@
 init()
 {
 	level.bw_version = "2.4.0-xenon";
-	
+
+	/*
+		Enable XP
+	*/
+	level.onlineGame = true;
+	level.rankedMatch = true;
+	setdvar("onlinegame", true);
+	setdvar("xblive_privatematch", false);
+
 	if ( getdvar( "bots_main" ) == "" )
 	{
 		setdvar( "bots_main", true );
